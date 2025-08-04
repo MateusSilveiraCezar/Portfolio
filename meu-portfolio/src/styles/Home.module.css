@@ -1,0 +1,71 @@
+.homeSection {
+  position: relative; /* necessário para posicionamento absoluto funcionar */
+  height: 100vh;
+  padding: 0 2rem;
+  background-image: url('/fundo.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeContent {
+  text-align: center;
+  max-width: 600px;
+}
+
+.homeContent h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.homeContent p {
+  font-size: 1.2rem;
+  color: #334155;
+  margin-bottom: 2rem;
+}
+
+.homeContent button {
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.homeContent button:hover {
+  background: #4f46e5;
+}
+
+.downloadLink {
+  text-decoration: none; /* remove underline */
+  display: inline-block;
+}
+
+/* Ajuste o botão para alinhar imagem + texto */
+.homeContent button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.homeContent button:hover {
+  background: #4f46e5;
+}
+
+.homeContent button img {
+  width: 20px; /* ajuste o tamanho da imagem */
+  height: 20px;
+}

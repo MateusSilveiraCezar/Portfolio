@@ -1,0 +1,24 @@
+.sidebar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 1rem 0.5rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.sidebar a {
+  color: #000;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #6366f1;
+}
