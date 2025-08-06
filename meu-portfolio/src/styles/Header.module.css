@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  background-color: #111;
-  color: white;
-  
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .logo {
@@ -15,9 +16,10 @@
 }
 
 .name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  margin-right: 800px;
+  margin-right: 600px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
@@ -34,10 +36,12 @@
 
 .menu a {
   text-decoration: none;
-  color: white;
+  color: #333333;
   transition: color 0.3s;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .menu a:hover {
-  color: #00bcd4;
+  color: #6366F1;
 }

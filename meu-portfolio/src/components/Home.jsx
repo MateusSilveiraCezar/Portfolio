@@ -7,7 +7,7 @@ export default function Home() {
     <section className={styles.homeSection}>
       <SocialSidebar />
       <div className={styles.homeContent}>
-        <h1>Olá! Eu sou Mateus Silveira Cezar</h1>
+        <h1>OLÁ! EU SOU O MATEUS SILVEIRA CEZAR</h1>
         <p>
           Desenvolvedor focado em resultados, construindo soluções modernas com
           React, Node.js e automações que geram impacto real.
