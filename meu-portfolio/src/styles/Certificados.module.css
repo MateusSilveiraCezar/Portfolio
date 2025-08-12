@@ -1,50 +1,145 @@
 .certificados {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: #f9fafb;
   text-align: center;
 }
 
-.certificados h2 {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 8px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.titulo::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #7c3aed; /* roxo */
+  margin: 8px auto 0;
+  border-radius: 4px;
 }
 
 .subtitulo {
+  font-size: 1.125rem;
   color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .grid {
   display: grid;
-  gap: 24px;
+  gap: 32px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .card {
-  background-color: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  text-align: left;
-  transition: transform 0.3s ease;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.1);
 }
 
-.botao {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 16px;
-  background-color: #007bff;
+.thumbWrapper {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  background-color: #fff; 
+}
+
+
+.card:hover .thumb {
+  transform: scale(1.05);
+}
+
+.cardInfo {
+  padding: 16px;
+  text-align: center;
+}
+
+.cardInfo h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cardInfo p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.cardInfo span {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Modal mais bonito */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: zoomIn 0.3s ease;
+}
+
+.modalClose {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
   color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.botao:hover {
-  background-color: #0056b3;
+.modalImage {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

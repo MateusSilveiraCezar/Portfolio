@@ -29,10 +29,6 @@
   margin-bottom: 2rem;
 }
 
-.homeContent button:hover {
-  background: #4f46e5;
-}
-
 .downloadLink {
   text-decoration: none; /* remove underline */
   display: inline-block;

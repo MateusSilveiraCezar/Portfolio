@@ -1,40 +1,77 @@
+import { useState } from "react";
 import styles from '../styles/Certificados.module.css';
 
 const certificados = [
   {
-    titulo: "Desenvolvimento Web com React",
-    instituicao: "Alura",
-    data: "Julho de 2025",
-    link: "https://exemplo.com/certificado-react"
+    titulo: "Inglês Avançado",
+    instituicao: "ILAC",
+    data: "Julho de 2023",
+    imagem: "/inglesCertificado.jpg"
   },
   {
+    titulo: "Formação Socail e Sustentabilidade",
+    instituicao: "FIAP",
+    data: "Março de 2024",
+    imagem: "nanoFiapSocial.jpg"
+  },
+   {
     titulo: "Node.js e Express",
     instituicao: "Rocketseat",
     data: "Maio de 2025",
-    link: "https://exemplo.com/certificado-node"
+    imagem: "https://exemplo.com/certificado-node.jpg"
   },
-  // Adicione mais certificados conforme necessário
 ];
 
 export default function Certifications() {
-    return (
-       <section className={styles.certificados}>
-        <h2>Certificados</h2>
-        <p className={styles.subtitulo}>Alguns dos cursos e certificações que concluí</p>
+  const [modalAberto, setModalAberto] = useState(false);
+  const [imagemModal, setImagemModal] = useState(null);
+
+  const abrirModal = (imagem) => {
+    setImagemModal(imagem);
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+    setImagemModal(null);
+  };
+
+  return (
+    <section className={styles.certificados}>
+      <div className={styles.container}>
+        <h2 className={styles.titulo}>CERTIFICADOS</h2>
+        <p className={styles.subtitulo}>
+          Abaixo estão alguns dos cursos e certificações que concluí recentemente:
+        </p>
+
         <div className={styles.grid}>
-            {certificados.map((cert, index) => (
-            <div key={index} className={styles.card}>
+          {certificados.map((cert, index) => (
+            <article 
+              key={index} 
+              className={styles.card} 
+              onClick={() => abrirModal(cert.imagem)}
+            >
+              <div className={styles.thumbWrapper}>
+                <img src={cert.imagem} alt={cert.titulo} className={styles.thumb} />
+              </div>
+              <div className={styles.cardInfo}>
                 <h3>{cert.titulo}</h3>
-                <p><strong>Instituição:</strong> {cert.instituicao}</p>
-                <p><strong>Data:</strong> {cert.data}</p>
-                {cert.link && (
-                <a href={cert.link} target="_blank" rel="noopener noreferrer" className={styles.botao}>
-                    Ver certificado
-                </a>
-                )}
-            </div>
-            ))}
+                <p>{cert.instituicao}</p>
+                <span>{cert.data}</span>
+              </div>
+            </article>
+          ))}
         </div>
-        </section>
-    )
+
+        {modalAberto && (
+          <div className={styles.modalOverlay} onClick={fecharModal}>
+            <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+              <button onClick={fecharModal} className={styles.modalClose}>✕</button>
+              <img src={imagemModal} alt="Certificado" className={styles.modalImage} />
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
 }

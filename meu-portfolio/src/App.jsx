@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -7,53 +8,75 @@ import Footer from "./components/Footer";
 import SocialSidebar from "./components/Sidebar";
 import About from "./components/About";
 import Certifications from "./components/Certifications";
+import ProjetoDetalhado from "./pages/ProjetoDetalhado";
+import ScrollTopButton from "./components/scrollTopButton";
 
-function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+export default function App() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case "home":
-        return <Home />;
-      case "about":
-        return <About />
-      case "projetos":
-        return <Projects />;
-      case "contato":
-        return <Contact />;
-      default:
-        return <Home />;
-    }
-  };
+  useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const target = e.target;
+      if (target.tagName === "A") {
+        const href = target.getAttribute("href");
+        // Só intercepta links que começam com "#" (hash interno)
+        if (href && href.startsWith("#")) {
+          e.preventDefault();
+          const id = href.slice(1); // remove o "#"
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            // Atualiza o hash na URL sem reload da página
+            window.history.pushState(null, "", href);
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+    return () => {
+      document.removeEventListener("click", handleAnchorClick);
+    };
+  }, []);
 
   return (
     <>
-      <Header setCurrentPage={setCurrentPage} />
-      {currentPage === "home" && <SocialSidebar />}
+      <Header />
+      {isHome && <SocialSidebar />}
       <main>
-         <section id="home">
-          <Home />
-        </section>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="home">
+                  <Home />
+                </section>
 
-        <section id="sobre">
-          <About />
-        </section>
+                <section id="sobre">
+                  <About />
+                </section>
 
-        <section id="projetos">
-          <Projects />
-        </section>
+                <section id="projetos">
+                  <Projects />
+                </section>
 
-        <section id="certificações">
-          <Certifications />
-        </section>
+                <section id="certificações">
+                  <Certifications />
+                </section>
 
-        <section id="contato">
-          <Contact />
-        </section>
+                <section id="contato">
+                  <Contact />
+                </section>
+              </>
+            }
+          />
+          <Route path="/projetos/:id" element={<ProjetoDetalhado />} />
+        </Routes>
       </main>
+      <ScrollTopButton />
       <Footer />
     </>
   );
 }
-
-export default App;

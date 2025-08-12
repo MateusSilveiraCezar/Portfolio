@@ -15,8 +15,10 @@ footer div {
 
 footer h2 {
   font-size: 1.5rem;
+  font-family:  'Montserrat', sans-serif;
+  font-weight: bold;
   margin-bottom: 1rem;
-  color: #38bdf8; /* Azul claro para destaque */
+  color: #7C3AED; 
 }
 
 footer p {
@@ -26,13 +28,14 @@ footer p {
 }
 
 footer a {
-  color: #38bdf8;
-  font-size: 1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 5px;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #ffffff;
+  color: #7C3AED;
 }
 
 footer span {
@@ -43,4 +46,9 @@ footer span {
   margin-top: 2rem;
   width: 100%;
   text-align: center;
+}
+
+footer span a {
+  font-size: 1rem;
+  color: #7C3AED;
 }

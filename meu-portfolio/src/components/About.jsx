@@ -12,7 +12,7 @@ export default function About() {
         <div className={styles.aboutText}>
           <h3>Conheça um pouco mais sobre mim!</h3>
           <p>
-            Sou desenvolvedor web com foco em <strong>Front-end</strong>, especializado na criação de interfaces modernas, responsivas e de alta performance para sites e aplicações. Cofundei a <strong>Mapech</strong>, uma empresa dedicada a soluções digitais como desenvolvimento de sites, automações de processos empresariais e dashboards personalizados para apoiar a tomada de decisões.
+            Sou desenvolvedor web <strong>Full-Stack</strong>, especializado na criação de interfaces modernas, responsivas e de alta performance para sites e aplicações. Cofundei a <strong>Mapech</strong>, uma empresa dedicada a soluções digitais como desenvolvimento de sites, automações de processos empresariais e dashboards personalizados para apoiar a tomada de decisões.
           </p>
           <p>
             Tenho experiência prática com tecnologias como <strong>React</strong>, <strong>Node.js</strong>, <strong>n8n</strong> e <strong>Power BI</strong>, sempre buscando entregar valor real por meio da tecnologia. Além da atuação técnica, compartilho aprendizados e boas práticas com a comunidade dev, contribuindo para o crescimento coletivo.

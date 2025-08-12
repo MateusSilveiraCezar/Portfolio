@@ -12,7 +12,7 @@ export default function Home() {
           Desenvolvedor focado em resultados, construindo soluções modernas com
           React, Node.js e automações que geram impacto real.
         </p>
-        <a href="/Mateus-CV.pdf" download className={styles.downloadLink}>
+        <a href="/MateusSilveiraCezar_Curriculo.pdf" download className={styles.downloadLink}>
           <button>
             <img src={download} alt="load" />
             Download CV
