@@ -100,13 +100,16 @@
 /* Modal mais bonito */
 .modalOverlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0; 
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
   background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease;
+  z-index: 9999;
 }
 
 .modalContent {
@@ -114,23 +117,29 @@
   max-width: 90vw;
   max-height: 90vh;
   animation: zoomIn 0.3s ease;
+  z-index: 10000;
+  overflow: auto; 
+  background: transparent; 
 }
 
+
 .modalClose {
-  position: absolute;
-  top: -40px;
-  right: 0;
+  position: fixed; 
+  top: 20px;
+  right: 20px;
   background: transparent;
   border: none;
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
+  z-index: 10001; 
 }
 
 .modalImage {
   max-width: 100%;
   max-height: 90vh;
   border-radius: 8px;
+  display: block;
 }
 
 /* Animações */

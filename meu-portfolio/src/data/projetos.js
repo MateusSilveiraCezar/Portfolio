@@ -34,13 +34,13 @@ const projetos = [
     },
     {       
         id: 'projeto3',
-        titulo: '',
+        titulo: 'WEATHER SENSE',
         resumo: '',
-        imagem: '/ventura.png',
-        tecnologias: ['React', 'CSS', 'JavaScript', 'HTML', 'Node.js', 'PostgresSQL','GitHub'],
-        link: '',
-        texto: ''
-    }
+        imagem: '/weather-sense.png',
+        tecnologias: ['React', 'CSS', 'JavaScript', 'HTML', 'API', 'Next.js', 'TypeScript', 'GitHub'],
+        link: 'https://weathersenseapp.vercel.app/',
+        texto: `<p>Como desenvolvedor do WeatherSense, meu desafio foi criar uma aplicação de previsão do tempo que fosse ao mesmo tempo elegante e funcional, focada em velocidade e simplicidade para o usuário final.</p> <p>O foco do projeto foi transformar dados brutos de uma API em uma experiência de usuário intuitiva e direta, garantindo acesso rápido a informações meteorológicas essenciais. A estrutura da aplicação foi desenhada para entregar performance e clareza em tempo real:</p> <ul> <li><strong>Consumo de API e Dados em Tempo Real:</strong> Desenvolvi uma integração eficiente com a API da OpenWeatherMap para buscar e exibir dados meteorológicos precisos, como temperatura, umidade e condições do tempo, de forma instantânea.</li> <li><strong>Interface de Usuário Reativa:</strong> Implementei uma interface limpa e minimalista que responde rapidamente às interações do usuário, permitindo a busca por qualquer cidade e exibindo os resultados de maneira clara e organizada.</li> <li><strong>Design Responsivo e Acessível:</strong> Criei um ambiente dinâmico e totalmente responsivo, garantindo que a aplicação seja funcional e visualmente agradável em qualquer dispositivo, seja desktop, tablet ou mobile.</li> </ul> <p>O projeto priorizou a usabilidade e a performance, indo além de uma simples consulta de tempo para entregar uma ferramenta rápida e confiável. O WeatherSense representa meu comprometimento com o desenvolvimento de soluções digitais eficientes, bem projetadas e focadas na experiência do usuário.</p>`
+    },
 ]
 
 export default projetos

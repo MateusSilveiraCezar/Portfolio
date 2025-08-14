@@ -13,17 +13,17 @@ const projetos = [
     id: 'projeto2',
     nome: "Ventura",
     descricao: "Site criado para a empresa Ventura com o objetivo de organizar os processos de locação e facilitar a comunicação entre a equipe e os funcionários responsáveis por cada etapa.",
-    link: "https://github.com/seuusuario/devdash",
+    link: "",
     imagem: "/ventura.png",
     botaoTexto: "Ver Projeto"
   },
   {
     id: 'projeto3',
-    nome: "Dopefolio",
-    descricao: "Dopefolio is a successful Open-Source project that I created which have been featured on some of the biggest tech sites...",
-    link: "https://github.com/seuusuario/dopefolio",
-    imagem: "/images/dopefolio.png",
-    botaoTexto: "Case Study"
+    nome: "Weather Sense",
+    descricao: "Projeto criado para fornecer dados de previsão do tempo de forma simples e eficiente, utilizando a API da OpenWeatherMap em uma interface intuitiva.",
+    link: "",
+    imagem: "/weather-sense.png",
+    botaoTexto: "Ver Projeto"
   },
 ];
 

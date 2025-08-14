@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from '../styles/Certificados.module.css';
 
 const certificados = [
@@ -9,16 +9,16 @@ const certificados = [
     imagem: "/inglesCertificado.jpg"
   },
   {
-    titulo: "Formação Socail e Sustentabilidade",
+    titulo: "Formação Social e Sustentabilidade",
     instituicao: "FIAP",
     data: "Março de 2024",
     imagem: "nanoFiapSocial.jpg"
   },
-   {
-    titulo: "Node.js e Express",
-    instituicao: "Rocketseat",
-    data: "Maio de 2025",
-    imagem: "https://exemplo.com/certificado-node.jpg"
+  {
+    titulo: "React e Node.js",
+    instituicao: "Alura",
+    data: "Agosto de 2025",
+    imagem: "react-node.jpg"
   },
 ];
 
@@ -35,6 +35,19 @@ export default function Certifications() {
     setModalAberto(false);
     setImagemModal(null);
   };
+
+  // Bloqueia a rolagem do body quando o modal estiver aberto
+  useEffect(() => {
+    if (modalAberto) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    // limpa caso o componente seja desmontado
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [modalAberto]);
 
   return (
     <section className={styles.certificados}>
