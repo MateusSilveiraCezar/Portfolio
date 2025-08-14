@@ -89,3 +89,71 @@
   font-weight: 600;
   color: green;
 }
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .form {
+    padding: 30px;
+  }
+}
+
+/* Celulares médios */
+@media screen and (max-width: 768px) {
+  .contactSection {
+    padding: 60px 16px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  .form {
+    padding: 25px;
+  }
+  .field input,
+  .field textarea {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+  .button {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+  .contactSection {
+    padding: 50px 12px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  .form {
+    padding: 20px;
+  }
+  .field input,
+  .field textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  .button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}

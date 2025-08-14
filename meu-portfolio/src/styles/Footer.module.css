@@ -1,5 +1,5 @@
 footer {
-  background-color: #000000; /* Azul escuro elegante */
+  background-color: #000000;
   color: #ffffff;
   padding: 2rem;
   display: flex;
@@ -51,4 +51,65 @@ footer span {
 footer span a {
   font-size: 1rem;
   color: #7C3AED;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  footer {
+    padding: 1.8rem;
+  }
+  footer h2 {
+    font-size: 1.4rem;
+  }
+  footer p {
+    font-size: 0.95rem;
+  }
+  footer a {
+    font-size: 1.4rem;
+  }
+  footer span {
+    font-size: 0.85rem;
+  }
+}
+
+/* Celulares médios */
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  footer h2 {
+    font-size: 1.3rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+  footer a {
+    font-size: 1.3rem;
+  }
+  footer span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+  footer h2 {
+    font-size: 1.1rem;
+  }
+  footer p {
+    font-size: 0.85rem;
+  }
+  footer a {
+    font-size: 1.2rem;
+  }
+  footer span {
+    font-size: 0.75rem;
+  }
 }

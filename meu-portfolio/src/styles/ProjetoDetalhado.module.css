@@ -1,4 +1,4 @@
-/* Adicione esta regra no início do seu arquivo CSS */
+
 *,
 *::before,
 *::after {
@@ -201,4 +201,118 @@
 
 .detalhes button:hover {
   background-color: #4f46e5;
+}
+
+/* Media query for screens up to 768px wide */
+@media (max-width: 768px) {
+  .capaContent {
+    height: 70vh; /* Reduces the height of the hero section */
+    padding: 0 1rem;
+  }
+
+  .h1 {
+    font-size: 2rem; /* Reduces the main title font size */
+  }
+  
+  .h1::after {
+      width: 40px; /* Reduces the size of the title's underline */
+  }
+
+  .capaContent p {
+    font-size: 1rem; /* Reduces the subtitle font size */
+    padding: 0 1rem;
+  }
+
+  .link {
+    padding: 1rem 2rem; /* Reduces the button padding */
+    font-size: 0.9rem;
+    margin-right: 0;
+  }
+
+  .detalhes {
+    padding: 2rem 1rem; /* Reduces padding for the details section */
+  }
+  
+  .notebookFrame img:not(.frame) {
+    /* Adjusts the position and size of the project image within the frame for mobile */
+    top: 27%;
+    left: 16.5%;
+    width: 67%;
+    height: 40%;
+  }
+
+  .detalhes h2 {
+    font-size: 1.5rem; /* Reduces the subheadings font size */
+  }
+  
+  .detalhes p, .detalhes li {
+    font-size: 1rem; /* Reduces the paragraph and list item font size */
+    line-height: 1.6;
+    margin-left: 0;
+  }
+
+  .links {
+    flex-direction: column; /* Stacks the buttons vertically on mobile */
+    gap: 1rem;
+  }
+
+  .projetoBtn, .voltarBtn {
+    width: 100%; /* Makes buttons full-width */
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .capaContent {
+    height: 60vh; /* Diminui a altura da capa ainda mais */
+  }
+
+  .h1 {
+    font-size: 1.8rem; /* Reduz o título principal para caber na tela */
+  }
+
+  .h1::after {
+    width: 30px; /* Reduz a linha abaixo do título */
+  }
+
+  .capaContent p {
+    font-size: 0.9rem; /* Torna a descrição mais compacta */
+  }
+
+  .link {
+    padding: 0.8rem 1.5rem; /* Reduz o preenchimento do botão de link */
+    font-size: 0.8rem;
+  }
+  
+  .detalhes {
+    padding: 1.5rem 0.5rem; /* Reduz o preenchimento geral para as laterais */
+  }
+
+  .notebookFrame img:not(.frame) {
+    /* Ajusta a posição da imagem do projeto para garantir que ela se encaixe bem no frame */
+    top: 27%;
+    left: 16.5%;
+    width: 67%;
+    height: 40%;
+  }
+
+  .detalhes h2 {
+    font-size: 1.3rem; /* Reduz o tamanho dos subtítulos */
+  }
+
+  .detalhes p, .detalhes li {
+    font-size: 0.95rem; /* Reduz o tamanho do texto para melhor leitura */
+  }
+
+  .links {
+    flex-direction: column; /* Garante que os botões fiquem empilhados */
+    gap: 0.8rem;
+  }
+
+  .projetoBtn, .voltarBtn {
+    padding: 0.8rem 1.5rem; /* Reduz o preenchimento dos botões */
+    font-size: 0.85rem;
+  }
 }

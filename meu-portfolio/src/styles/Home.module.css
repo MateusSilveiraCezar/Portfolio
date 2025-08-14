@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .homeSection {
-  position: relative; /* necessário para posicionamento absoluto funcionar */
+  position: relative;
   height: 100vh;
   padding: 0 2rem;
   background-image: url('/fundo.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +15,7 @@
 .homeContent {
   text-align: center;
   max-width: 850px;
+  padding: 1rem;
 }
 
 .homeContent h1 {
@@ -30,17 +33,16 @@
 }
 
 .downloadLink {
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
   display: inline-block;
 }
 
-/* Ajuste o botão para alinhar imagem + texto */
 .homeContent button {
   display: flex;
   align-items: center;
   gap: 8px;
   background: #6366f1;
-  color: rgb(255, 255, 255);
+  color: #fff;
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 6px;
@@ -54,6 +56,50 @@
 }
 
 .homeContent button img {
-  width: 20px; /* ajuste o tamanho da imagem */
+  width: 20px;
   height: 20px;
+}
+
+/* ===== Responsividade ===== */
+/* Celulares médios */
+@media screen and (max-width: 768px) {
+  .homeSection {
+    padding: 0 1.5rem;
+  }
+  .homeContent h1 {
+    font-size: 2rem;
+  }
+  .homeContent p {
+    font-size: 1rem;
+  }
+  .homeContent button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+  .homeSection {
+    padding: 0 1rem;
+  }
+  .homeContent {
+    padding: 0.5rem;
+  }
+  .homeContent h1 {
+    font-size: 1.6rem;
+  }
+  .homeContent p {
+    font-size: 0.9rem;
+  }
+  .homeContent button {
+    flex-direction: column;
+    gap: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  .homeContent button img {
+    width: 18px;
+    height: 18px;
+  }
 }

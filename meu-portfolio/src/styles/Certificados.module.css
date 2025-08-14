@@ -12,9 +12,8 @@
 .titulo {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 12px;
   font-weight: 700;
+  margin-bottom: 12px;
   color: #000000;
 }
 
@@ -23,7 +22,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #7c3aed; /* roxo */
+  background-color: #7c3aed;
   margin: 8px auto 0;
   border-radius: 4px;
 }
@@ -63,14 +62,12 @@
   background-color: #fff;
 }
 
-
 .thumb {
   width: 100%;
   height: 100%;
   object-fit: contain; 
   background-color: #fff; 
 }
-
 
 .card:hover .thumb {
   transform: scale(1.05);
@@ -97,7 +94,7 @@
   color: #999;
 }
 
-/* Modal mais bonito */
+/* Modal */
 .modalOverlay {
   position: fixed;
   top: 0; 
@@ -121,7 +118,6 @@
   overflow: auto; 
   background: transparent; 
 }
-
 
 .modalClose {
   position: fixed; 
@@ -151,4 +147,72 @@
 @keyframes zoomIn {
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .titulo {
+    font-size: 2.2rem;
+  }
+  .subtitulo {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .cardInfo h3 {
+    font-size: 1rem;
+  }
+  .cardInfo p {
+    font-size: 0.9rem;
+  }
+  .cardInfo span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Celulares médios */
+@media screen and (max-width: 768px) {
+  .certificados {
+    padding: 60px 16px;
+  }
+  .titulo {
+    font-size: 2rem;
+  }
+  .subtitulo {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  .cardInfo h3 {
+    font-size: 0.95rem;
+  }
+  .cardInfo p {
+    font-size: 0.85rem;
+  }
+  .cardInfo span {
+    font-size: 0.75rem;
+  }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+  .certificados {
+    padding: 50px 12px;
+  }
+  .titulo {
+    font-size: 1.8rem;
+  }
+  .subtitulo {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  .cardInfo h3 {
+    font-size: 0.9rem;
+  }
+  .cardInfo p {
+    font-size: 0.8rem;
+  }
+  .cardInfo span {
+    font-size: 0.7rem;
+  }
 }
