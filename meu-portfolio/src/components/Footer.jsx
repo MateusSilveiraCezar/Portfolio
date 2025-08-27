@@ -13,7 +13,7 @@ export default function Footer() {
                 <a href="https://linkedin.com/in/seulinkedin" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                 <a href="https://github.com/seugithub" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                 <a href="https://www.instagram.com/mat.eusscz/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="mailto:mateussilveiracezar08@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope /></a>
+                <a href="/#contato"><FaEnvelope /></a>
             </div>
             <span>© Copyright 2025. Made by <a href="#">Mateus Cezar</a></span>
         </footer>
